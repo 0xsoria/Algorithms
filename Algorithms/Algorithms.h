@@ -7,6 +7,9 @@
 
 #import <Foundation/Foundation.h>
 #import "InsertSortOBJC.h"
+#import "InsertSortCPP.h"
+#import "SelectionSort.h"
+#include "InsertionSort.h"
 
 //! Project version number for Algorithms.
 FOUNDATION_EXPORT double AlgorithmsVersionNumber;
