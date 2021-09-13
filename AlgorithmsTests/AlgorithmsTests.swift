@@ -15,48 +15,44 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertTrue(result.0 == [1, 2, 3, 10, 11, 12])
         XCTAssertTrue(result.1 == 9)
     }
-    
-    let values = [8, 2, 10, 9, 5, 11, 6, 1, 7, 3, 4]
-    
-    func testSelectionSort() {
-        var list = values.map { Int32($0) }
-        measure {
-            selectionSort(&list, Int32(0), Int32(list.count - 1))
-            XCTAssertTrue(list == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
-        }
+
+    func testKaratsuba() {
+        let karatsuba = karatsuba(100000, by: 100000)
+        let multiply = multiply("100000", by: "100000")
+        XCTAssertTrue(100000 * 100000 == karatsuba)
+        XCTAssertTrue(Int(multiply)! == 100000 * 100000)
     }
     
-    func testInsertionSortMeasure() {
-        measure {
-            let array = [8, 2, 10, 9, 5, 11, 6, 1, 7, 3, 4]
-            let sorted = array.insertSort()
-            XCTAssertTrue(sorted == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
-        }
+    func testMergeSort() {
+        let testt = [1, 4, 5, 9, 2, 3]
+        let sorted = testt.mergeSort()
+        XCTAssertTrue(sorted == [1, 2, 3, 4, 5, 9])
     }
     
-    func testInsertSortCPPMeasure() {
-        measure {
-            let array = InsertSortCPP(arrayWithValues: self.values)
-            let sorted = array.insertSort()
-            let sortedArray = sorted as! Array<Int>
-            XCTAssertTrue(sortedArray == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
-        }
+    func testMergeSortString() {
+        let strs = ["b", "a", "n", "z", "c"]
+        let sorted = strs.mergeSort()
+        XCTAssertTrue(sorted == ["a", "b", "c", "n", "z"])
     }
     
-    func testInsertSortOBJCMeasure() {
-        measure {
-            let array = InsertSortOBJC(arrayWithValues: self.values)
-            let sorted = array.insertSort()
-            let sortedArray = sorted as! Array<Int>
-            XCTAssertTrue(sortedArray == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+    func testInversionFromBundle() {
+        let bundle = Bundle(for: type(of: self))
+        if let bundleURL = Bundle.main.url(forResource: "", withExtension: ""),
+           let contentsOfFile = try? String(contentsOfFile: bundleURL.path, encoding: .utf8) {
+            let components = contentsOfFile.components(separatedBy: .newlines)
+            print(components)
         }
-    }
-    
-    func testNormalSort() {
-        measure {
-            let array = [8, 2, 10, 9, 5, 11, 6, 1, 7, 3, 4]
-            let sorted = array.sorted()
-            XCTAssertTrue(sorted == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
+        let url = bundle.url(forResource: "Inversions", withExtension: "txt")
+        XCTAssertNotNil(url)
+        let data = try? String(contentsOfFile: url!.path, encoding: .utf8)
+        XCTAssertNotNil(data)
+        let dataSet = data!.components(separatedBy: .newlines).compactMap {
+            Int($0)
         }
+        XCTAssertFalse(dataSet.isEmpty)
+        XCTAssertTrue(dataSet.count == 100000)
+        let result = sortAndCountInversions(dataSet, lenght: 100000)
+        XCTAssertTrue(result.0.count == 100000)
+        print(result.1)
     }
 }
