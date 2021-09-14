@@ -23,10 +23,24 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertTrue(Int(multiply)! == 100000 * 100000)
     }
     
+    func testPartition() {
+        var sut = [3, 8, 2, 5, 1, 4, 7, 6]
+        sut.partition(leftMost: 0, rightMost: 7)
+        print(sut)
+        XCTAssertTrue(sut == [1, 2, 3, 5, 8, 4, 7, 6])
+    }
+    
     func testMergeSort() {
         let testt = [1, 4, 5, 9, 2, 3]
         let sorted = testt.mergeSort()
         XCTAssertTrue(sorted == [1, 2, 3, 4, 5, 9])
+    }
+    
+    func testMergeEqual() {
+        let testt = [1, 9, 4, 3, 2, 1, 1]
+        let sorted = testt.mergeSort()
+        print(sorted)
+        XCTAssertTrue(sorted == [1, 1, 1, 2, 3, 4, 9])
     }
     
     func testMergeSortString() {

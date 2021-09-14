@@ -48,6 +48,9 @@ extension Array where Element: Comparable {
             } else if c[indexC] < b[indexB] {
                 returnArray[k] = c[indexC]
                 indexC += 1
+            } else if c[indexC] == b[indexB] {
+                returnArray[k] = c[indexC]
+                indexC += 1
             }
         }
         return returnArray

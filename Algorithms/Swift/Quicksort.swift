@@ -37,6 +37,18 @@ extension Array where Element: Comparable {
             self.quickSort(low: middleLast + 1, high: high)
         }
     }
+    
+    mutating func partition(leftMost: Int, rightMost: Int) {
+        let pivot = self[leftMost]
+        var i = leftMost + 1
+        for j in (leftMost + 1)...rightMost {
+            if self[j] < pivot {
+                self.swapAt(j, i)
+                i += 1
+            }
+        }
+        self.swapAt(leftMost, i-1)
+    }
 }
 
 
