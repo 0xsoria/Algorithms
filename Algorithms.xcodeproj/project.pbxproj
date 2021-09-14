@@ -144,13 +144,12 @@
 				15ED775F26EA8B2A004D86C3 /* BubbleSort */,
 				15ED776126EA8B2A004D86C3 /* SelectionSort */,
 				15ED776326EA8B2A004D86C3 /* InsertSort */,
-				15ED776526EA8B2A004D86C3 /* Multiply.swift */,
-				15ED776626EA8B2A004D86C3 /* SortAndCount.swift */,
+				15FCDAFA26F1476800A968D9 /* Multiplication */,
+				15FCDAFB26F1477100A968D9 /* Inversions */,
 				15ED776726EA8B2A004D86C3 /* UniqueString.swift */,
-				15ED776826EA8B2A004D86C3 /* Karatsuba.swift */,
-				15ED776A26EA8B2A004D86C3 /* Quicksort.swift */,
-				15FCDAF326F009B700A968D9 /* MergeSort.swift */,
-				15FCDAF526F142D300A968D9 /* MySet.swift */,
+				15FCDAF726F1475100A968D9 /* QuickSort */,
+				15FCDAF826F1475900A968D9 /* MergeSort */,
+				15FCDAF926F1476000A968D9 /* Sets */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -264,6 +263,47 @@
 				15ED778F26EA8C8B004D86C3 /* SelectionSort.c */,
 			);
 			path = SelectionSort;
+			sourceTree = "<group>";
+		};
+		15FCDAF726F1475100A968D9 /* QuickSort */ = {
+			isa = PBXGroup;
+			children = (
+				15ED776A26EA8B2A004D86C3 /* Quicksort.swift */,
+			);
+			path = QuickSort;
+			sourceTree = "<group>";
+		};
+		15FCDAF826F1475900A968D9 /* MergeSort */ = {
+			isa = PBXGroup;
+			children = (
+				15FCDAF326F009B700A968D9 /* MergeSort.swift */,
+			);
+			path = MergeSort;
+			sourceTree = "<group>";
+		};
+		15FCDAF926F1476000A968D9 /* Sets */ = {
+			isa = PBXGroup;
+			children = (
+				15FCDAF526F142D300A968D9 /* MySet.swift */,
+			);
+			path = Sets;
+			sourceTree = "<group>";
+		};
+		15FCDAFA26F1476800A968D9 /* Multiplication */ = {
+			isa = PBXGroup;
+			children = (
+				15ED776526EA8B2A004D86C3 /* Multiply.swift */,
+				15ED776826EA8B2A004D86C3 /* Karatsuba.swift */,
+			);
+			path = Multiplication;
+			sourceTree = "<group>";
+		};
+		15FCDAFB26F1477100A968D9 /* Inversions */ = {
+			isa = PBXGroup;
+			children = (
+				15ED776626EA8B2A004D86C3 /* SortAndCount.swift */,
+			);
+			path = Inversions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
