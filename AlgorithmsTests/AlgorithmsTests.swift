@@ -30,6 +30,13 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertTrue(sut == [1, 2, 3, 5, 8, 4, 7, 6])
     }
     
+    func testAnotherPartition() {
+        var sut = [3, 8, 2, 5, 1, 4, 7, 6]
+        sut.partition(leftMost: 0, rightMost: 7)
+        print(sut)
+        XCTAssertTrue(sut == [1, 2, 3, 5, 8, 4, 7, 6])
+    }
+    
     func testMergeSort() {
         let testt = [1, 4, 5, 9, 2, 3]
         let sorted = testt.mergeSort()
@@ -68,5 +75,19 @@ class AlgorithmsTests: XCTestCase {
         let result = sortAndCountInversions(dataSet, lenght: 100000)
         XCTAssertTrue(result.0.count == 100000)
         print(result.1)
+    }
+
+    func testMySetInsertionAndRemove() {
+        var mySet = NewSet<String>()
+        mySet.insert("Gabriel")
+        XCTAssertTrue(mySet.count == 1)
+        mySet.insert("Gabriel")
+        XCTAssertTrue(mySet.count == 1)
+        mySet.insert("Marcela")
+        XCTAssertTrue(mySet.count == 2)
+        _ = mySet.remove("Gabriel")
+        XCTAssertTrue(mySet.count == 1)
+        _ = mySet.remove("Marcela")
+        XCTAssertTrue(mySet.count == 0)
     }
 }

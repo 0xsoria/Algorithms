@@ -9,13 +9,17 @@ func djb2Hash(_ string: String) -> Int {
 }
 
 public struct HashTable<Key: Hashable, Value> {
-    private typealias Element = (key: Key, value: Value)
-    private typealias Bucket = [Element]
+    typealias Element = (key: Key, value: Value)
+    typealias Bucket = [Element]
     private var buckets: [Bucket]
     
     private(set) public var count = 0
     public var isEmpty: Bool {
         count == 0
+    }
+    
+    public var elementsCount: Int {
+        self.buckets.reduce(0) { $0 + $1.count }
     }
     
     public init(capacity: Int) {
@@ -68,7 +72,7 @@ public struct HashTable<Key: Hashable, Value> {
         return buckets[index].first { $0.key == key }?.value
     }
     
-    private func index(for key: Key) -> Int {
+    func index(for key: Key) -> Int {
         abs(key.hashValue) % buckets.count
     }
 }

@@ -33,6 +33,7 @@
 		15ED779526EA8FC5004D86C3 /* MeasureTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15ED779426EA8FC5004D86C3 /* MeasureTesting.swift */; };
 		15FCDAF226EEBAB100A968D9 /* Inversions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 15FCDAF126EEBAB100A968D9 /* Inversions.txt */; };
 		15FCDAF426F009B700A968D9 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCDAF326F009B700A968D9 /* MergeSort.swift */; };
+		15FCDAF626F142D300A968D9 /* MySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCDAF526F142D300A968D9 /* MySet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		15ED779426EA8FC5004D86C3 /* MeasureTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasureTesting.swift; sourceTree = "<group>"; };
 		15FCDAF126EEBAB100A968D9 /* Inversions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Inversions.txt; sourceTree = "<group>"; };
 		15FCDAF326F009B700A968D9 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
+		15FCDAF526F142D300A968D9 /* MySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				15ED776826EA8B2A004D86C3 /* Karatsuba.swift */,
 				15ED776A26EA8B2A004D86C3 /* Quicksort.swift */,
 				15FCDAF326F009B700A968D9 /* MergeSort.swift */,
+				15FCDAF526F142D300A968D9 /* MySet.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				15ED777326EA8B2A004D86C3 /* Quicksort.swift in Sources */,
 				15ED774926EA8AEB004D86C3 /* Algorithms.docc in Sources */,
 				15ED777826EA8B54004D86C3 /* InsertSortOBJC.m in Sources */,
+				15FCDAF626F142D300A968D9 /* MySet.swift in Sources */,
 				15ED777026EA8B2A004D86C3 /* UniqueString.swift in Sources */,
 				15ED776E26EA8B2A004D86C3 /* Multiply.swift in Sources */,
 				15ED776F26EA8B2A004D86C3 /* SortAndCount.swift in Sources */,
