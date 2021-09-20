@@ -10,6 +10,31 @@ import XCTest
 
 class AlgorithmsTests: XCTestCase {
     
+    func makeSut() -> [Int] {
+        let bundle = Bundle(for: type(of: self))
+        let url = bundle.url(forResource: "Inversions", withExtension: "txt")
+        assert(url != nil)
+        let data = try? String(contentsOfFile: url!.path, encoding: .utf8)
+        assert(data != nil)
+        let dataSet = data!.components(separatedBy: .newlines).compactMap {
+            Int($0)
+        }
+        return dataSet
+    }
+    
+    func testNewPartition() {
+        var newPar = [5, 2, 3, 4]
+        newPar.myQuickSort(low: 0, high: newPar.count - 1)
+        XCTAssertTrue(newPar == [2, 3, 4, 5])
+    }
+    
+    func testQuickSortWithSut() {
+        var sut = self.makeSut()
+        sut.myQuickSort(low: 0, high: sut.count - 1)
+        XCTAssertTrue(sut.first! == 1)
+        XCTAssertTrue(sut.last! == 100000)
+    }
+    
     func testSortAndCountInversion() {
         let result = sortAndCountInversions([10, 11, 12, 1, 2, 3], lenght: 6)
         XCTAssertTrue(result.0 == [1, 2, 3, 10, 11, 12])
