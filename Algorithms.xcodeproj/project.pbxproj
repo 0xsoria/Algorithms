@@ -34,6 +34,7 @@
 		15FCDAF226EEBAB100A968D9 /* Inversions.txt in Resources */ = {isa = PBXBuildFile; fileRef = 15FCDAF126EEBAB100A968D9 /* Inversions.txt */; };
 		15FCDAF426F009B700A968D9 /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCDAF326F009B700A968D9 /* MergeSort.swift */; };
 		15FCDAF626F142D300A968D9 /* MySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCDAF526F142D300A968D9 /* MySet.swift */; };
+		15FE2EF227067E5D00373C76 /* RandomizedSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE2EF127067E5D00373C76 /* RandomizedSelection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		15FCDAF126EEBAB100A968D9 /* Inversions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Inversions.txt; sourceTree = "<group>"; };
 		15FCDAF326F009B700A968D9 /* MergeSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 		15FCDAF526F142D300A968D9 /* MySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySet.swift; sourceTree = "<group>"; };
+		15FE2EF127067E5D00373C76 /* RandomizedSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizedSelection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				15FCDAF726F1475100A968D9 /* QuickSort */,
 				15FCDAF826F1475900A968D9 /* MergeSort */,
 				15FCDAF926F1476000A968D9 /* Sets */,
+				15FE2EF127067E5D00373C76 /* RandomizedSelection.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				15ED778826EA8C7D004D86C3 /* HashTable.swift in Sources */,
 				15ED778626EA8C17004D86C3 /* InsertSortCPP.cpp in Sources */,
 				15ED776D26EA8B2A004D86C3 /* InsertSort.swift in Sources */,
+				15FE2EF227067E5D00373C76 /* RandomizedSelection.swift in Sources */,
 				15ED777326EA8B2A004D86C3 /* Quicksort.swift in Sources */,
 				15ED774926EA8AEB004D86C3 /* Algorithms.docc in Sources */,
 				15ED777826EA8B54004D86C3 /* InsertSortOBJC.m in Sources */,

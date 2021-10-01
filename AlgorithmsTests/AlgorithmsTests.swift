@@ -22,6 +22,12 @@ class AlgorithmsTests: XCTestCase {
         return dataSet
     }
     
+    func testRandomizedSelection() {
+        var items = [10, 8, 2, 4]
+        let random = items.randomizedSelection(low: 0, high: items.count - 1, order: 2)
+        XCTAssertTrue(random == 8)
+    }
+    
     func testNewPartition() {
         var newPar = [5, 2, 3, 4]
         newPar.myQuickSort(low: 0, high: newPar.count - 1)
