@@ -28,6 +28,30 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertTrue(random == 8)
     }
     
+    func testRandomizedSelectionFirstOrder() {
+        var items = [10, 8, 2, 4]
+        let random = items.randomizedSelection(low: 0,
+                                               high: items.count - 1,
+                                               order: 0)
+        XCTAssertTrue(random == 2)
+    }
+    
+    func testRandomizedSelectionSecondOrder() {
+        var items = [10, 8, 2, 4]
+        let random = items.randomizedSelection(low: 0,
+                                               high: items.count - 1,
+                                               order: 1)
+        XCTAssertTrue(random == 4)
+    }
+    
+    func testRandomizedSelectionFourthOrder() {
+        var items = [10, 8, 2, 4]
+        let random = items.randomizedSelection(low: 0,
+                                               high: items.count - 1,
+                                               order: 3)
+        XCTAssertTrue(random == 10)
+    }
+    
     func testNewPartition() {
         var newPar = [5, 2, 3, 4]
         newPar.myQuickSort(low: 0, high: newPar.count - 1)

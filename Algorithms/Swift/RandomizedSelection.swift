@@ -7,7 +7,7 @@
 
 extension Array where Element: Comparable {
     public mutating func randomizedSelection(low: Int, high: Int, order: Int) -> Element? {
-        if high - low == 1 {
+        if high - low <= 0 {
             return self[order]
         }
         guard let pivot = (low...high).randomElement() else { return nil }
