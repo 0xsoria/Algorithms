@@ -29,7 +29,7 @@ using namespace std;
     
     vector<int> cppArray;
     
-    int count = [self.content count];
+    NSUInteger count = [self.content count];
     for (int index = 0; index < count; index++) {
         int number = [[self.content objectAtIndex:index] intValue];
         cppArray.push_back(number);
