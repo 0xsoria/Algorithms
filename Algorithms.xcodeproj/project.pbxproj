@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		15B0F6AE2715D4DD000326C9 /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B0F6AD2715D4DD000326C9 /* Visit.swift */; };
-		15B0F6B02715D51B000326C9 /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B0F6AF2715D51B000326C9 /* Dijkstra.swift */; };
 		15B0F6B2271751F2000326C9 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B0F6B1271751F2000326C9 /* Heap.swift */; };
 		15C3B9492711DB8C00512816 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3B9482711DB8C00512816 /* Graph.swift */; };
 		15C3B94C2711DC9F00512816 /* EdgeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3B94B2711DC9F00512816 /* EdgeType.swift */; };
@@ -18,7 +17,6 @@
 		15C3B9542711E43000512816 /* GraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3B9532711E43000512816 /* GraphTests.swift */; };
 		15C3B95627135B3D00512816 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3B95527135B3D00512816 /* Queue.swift */; };
 		15C3B958271365D100512816 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C3B957271365D100512816 /* Stack.swift */; };
-		15CC5EB82731D0A800348672 /* MedianElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC5EB72731D0A800348672 /* MedianElement.swift */; };
 		15CC5EBA2742D86E00348672 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC5EB92742D86E00348672 /* BinarySearchTree.swift */; };
 		15CC5EBC2742E20A00348672 /* BSTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC5EBB2742E20A00348672 /* BSTTests.swift */; };
 		15CC5EBE2745211A00348672 /* TwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CC5EBD2745211A00348672 /* TwoSum.swift */; };
@@ -51,6 +49,7 @@
 		15FCDAF626F142D300A968D9 /* MySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCDAF526F142D300A968D9 /* MySet.swift */; };
 		15FE2EF227067E5D00373C76 /* RandomizedSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE2EF127067E5D00373C76 /* RandomizedSelection.swift */; };
 		15FE2EF6270748BC00373C76 /* SlowAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE2EF5270748BC00373C76 /* SlowAlgorithms.swift */; };
+		ABE638502AED5BFC00652B7E /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6384F2AED5BFC00652B7E /* Others.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +64,6 @@
 
 /* Begin PBXFileReference section */
 		15B0F6AD2715D4DD000326C9 /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
-		15B0F6AF2715D51B000326C9 /* Dijkstra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dijkstra.swift; sourceTree = "<group>"; };
 		15B0F6B1271751F2000326C9 /* Heap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		15C3B9482711DB8C00512816 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		15C3B94B2711DC9F00512816 /* EdgeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeType.swift; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 		15C3B9532711E43000512816 /* GraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTests.swift; sourceTree = "<group>"; };
 		15C3B95527135B3D00512816 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		15C3B957271365D100512816 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		15CC5EB72731D0A800348672 /* MedianElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedianElement.swift; sourceTree = "<group>"; };
 		15CC5EB92742D86E00348672 /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		15CC5EBB2742E20A00348672 /* BSTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSTTests.swift; sourceTree = "<group>"; };
 		15CC5EBD2745211A00348672 /* TwoSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSum.swift; sourceTree = "<group>"; };
@@ -109,6 +106,7 @@
 		15FCDAF526F142D300A968D9 /* MySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySet.swift; sourceTree = "<group>"; };
 		15FE2EF127067E5D00373C76 /* RandomizedSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizedSelection.swift; sourceTree = "<group>"; };
 		15FE2EF5270748BC00373C76 /* SlowAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowAlgorithms.swift; sourceTree = "<group>"; };
+		ABE6384F2AED5BFC00652B7E /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +137,6 @@
 				15C3B94B2711DC9F00512816 /* EdgeType.swift */,
 				15C3B9512711DF2600512816 /* AdjacencyList.swift */,
 				15B0F6AD2715D4DD000326C9 /* Visit.swift */,
-				15B0F6AF2715D51B000326C9 /* Dijkstra.swift */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -206,9 +203,9 @@
 				15C3B95527135B3D00512816 /* Queue.swift */,
 				15C3B957271365D100512816 /* Stack.swift */,
 				15B0F6B1271751F2000326C9 /* Heap.swift */,
-				15CC5EB72731D0A800348672 /* MedianElement.swift */,
 				15CC5EB92742D86E00348672 /* BinarySearchTree.swift */,
 				15CC5EBD2745211A00348672 /* TwoSum.swift */,
+				ABE6384F2AED5BFC00652B7E /* Others.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -489,14 +486,12 @@
 				15ED778826EA8C7D004D86C3 /* HashTable.swift in Sources */,
 				15C3B94E2711DCAE00512816 /* Vertex.swift in Sources */,
 				15CC5EBE2745211A00348672 /* TwoSum.swift in Sources */,
-				15B0F6B02715D51B000326C9 /* Dijkstra.swift in Sources */,
 				15C3B9522711DF2600512816 /* AdjacencyList.swift in Sources */,
 				15ED778626EA8C17004D86C3 /* InsertSortCPP.cpp in Sources */,
 				15ED776D26EA8B2A004D86C3 /* InsertSort.swift in Sources */,
 				15FE2EF227067E5D00373C76 /* RandomizedSelection.swift in Sources */,
 				15ED777326EA8B2A004D86C3 /* Quicksort.swift in Sources */,
 				15CC5EBA2742D86E00348672 /* BinarySearchTree.swift in Sources */,
-				15CC5EB82731D0A800348672 /* MedianElement.swift in Sources */,
 				15ED774926EA8AEB004D86C3 /* Algorithms.docc in Sources */,
 				15ED777826EA8B54004D86C3 /* InsertSortOBJC.m in Sources */,
 				15FCDAF626F142D300A968D9 /* MySet.swift in Sources */,
@@ -508,6 +503,7 @@
 				15C3B95627135B3D00512816 /* Queue.swift in Sources */,
 				15ED776C26EA8B2A004D86C3 /* SelectionSort.swift in Sources */,
 				15ED779326EA8C8B004D86C3 /* SelectionSort.c in Sources */,
+				ABE638502AED5BFC00652B7E /* Others.swift in Sources */,
 				15C3B9492711DB8C00512816 /* Graph.swift in Sources */,
 				15ED776B26EA8B2A004D86C3 /* BubbleSort.swift in Sources */,
 				15B0F6B2271751F2000326C9 /* Heap.swift in Sources */,

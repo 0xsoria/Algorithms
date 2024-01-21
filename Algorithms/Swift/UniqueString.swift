@@ -64,6 +64,66 @@ extension String {
                                   options: .regularExpression,
                                   range: nil)
     }
+
+    public func isPalindrome() -> Bool {
+        let asArray = Array(self)
+        var startIndex = 0
+        var lastIndex = asArray.count - 1
+
+        while startIndex < lastIndex {
+            if asArray[startIndex] != asArray[lastIndex] {
+                return false
+            }
+            startIndex += 1
+            lastIndex -= 1
+        }
+
+        return true
+    }
+
+    public func isSubsequence(of str: String) -> Bool {
+        let asArray = Array(self)
+        let second = Array(str)
+        var i = 0
+        var j = 0
+        while i <= asArray.count - 1 && j <= second.count - 1 {
+            if asArray[i] == second[j] {
+                i += 1
+            }
+            j += 1
+        }
+
+        return i == asArray.count
+    }
+    
+    public func reversed() -> Self {
+        var asArray: [Character] = Array(self)
+        var leftPointer = 0
+        var rightPointer = asArray.count - 1
+
+        while leftPointer < rightPointer {
+            asArray.swapAt(leftPointer, rightPointer)
+            leftPointer += 1
+            rightPointer -= 1
+        }
+
+        return String(asArray)
+    }
+    
+    public func pangram() -> Bool {
+        guard count >= 26 else {
+            return false
+        }
+        var setOfChars = Set<Character>()
+        for i in self {
+            if setOfChars.count >= 26 {
+                return true
+            }
+            setOfChars.insert(i)
+        }
+
+        return setOfChars.count >= 26
+    }
 }
 
 public func isPermutationOfPalindrome(phrase: String) -> Bool {

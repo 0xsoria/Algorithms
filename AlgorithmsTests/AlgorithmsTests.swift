@@ -10,6 +10,66 @@ import XCTest
 
 class AlgorithmsTests: XCTestCase {
     
+    func testCount() {
+        XCTAssertEqual(countElements([1,1,3,3,5,5,7,7]), 0)
+        XCTAssertEqual(countElements([1,2,3]), 2)
+    }
+    
+    func testMissingNumber() {
+        XCTAssertEqual(missingNumber([9,6,4,2,3,5,7,0,1]),
+                       8)
+        XCTAssertEqual(missingNumber([0, 1]),
+                       2)
+        XCTAssertEqual(missingNumber([3, 0, 1]),
+                       2)
+    }
+    
+    func testPangram() {
+        XCTAssertFalse("jwtucoucmdfwxxqnxzkaxoglszmfrcvjoiunqqausaxxaaijyqdqgvdnqcaihwilqkpivenpnekioyqujrdrovqrlxovcucjqzjsxmllfgndfprctxvxwlzjtciqxgsxfwhmuzqvlksyuztoetyjugmswfjtawwaqmwyxmvo".pangram())
+        XCTAssertTrue("thequickbrownfoxjumpsoverthelazydog".pangram())
+        XCTAssertFalse("Gabriel".pangram())
+    }
+
+    func testFindNumbers() {
+        XCTAssertEqual(findNumbers(nums: [1, 2, 3, 5, 8, 12, 13, 14, 15]).sorted(),
+                       [5, 8])
+    }
+
+    func testFirstRepeatedChar() {
+        XCTAssertEqual(firstRepeatedCharacter("abcdeda"), Character("d"))
+        XCTAssertEqual(firstRepeatedCharacter("abcdefg"), Character(" "))
+    }
+
+    func testTwoSumNotSorted() {
+        XCTAssertEqual(twoSumNotSorted(nums: [5, 2, 7, 10, 3, 9], target: 8), [4, 0])
+        XCTAssertEqual(twoSumNotSorted(nums: [5, 2, 7, 10, 3, 9], target: 18), [])
+    }
+    
+    func testReversedString() {
+        XCTAssertTrue("hello".reversed() == "olleh")
+        XCTAssertTrue("bala".reversed() == "alab")
+    }
+
+    func testSubsequence() {
+        XCTAssertTrue("ace".isSubsequence(of: "abcde"))
+        XCTAssertFalse("ace".isSubsequence(of: "aebcd"))
+    }
+    
+    func testTarget() {
+        XCTAssertTrue(checkForTarget(nums: [1, 2, 4, 6, 8, 9, 14, 15], target: 13))
+        XCTAssertFalse(checkForTarget(nums: [1, 2, 4, 6, 8, 9, 14, 15], target: 30))
+    }
+
+    func testCombineArrays() {
+        XCTAssertEqual([1, 2, 3].combine(with: [4, 5, 6]), [1, 2, 3, 4, 5, 6])
+        XCTAssertEqual([1, 4, 7, 20].combine(with: [3, 5, 6]), [1, 3, 4, 5, 6, 7, 20])
+    }
+
+    func testPalindrome() {
+        XCTAssertTrue("racecar".isPalindrome())
+        XCTAssertFalse("aceba".isPalindrome())
+    }
+
     func makeSut() -> [Int] {
         let bundle = Bundle(for: type(of: self))
         let url = bundle.url(forResource: "Inversions", withExtension: "txt")
