@@ -201,3 +201,126 @@ public func countElements(_ arr: [Int]) -> Int {
 
     return count
 }
+
+public func findLenght(nums: [Int], k: Int) -> Int {
+    var left = 0, current = 0, answer = 0
+    for right in 0..<nums.count {
+        current += nums[left]
+        while current > k {
+            current -= nums[left]
+            left += 1
+        }
+
+        answer = max(answer, right - left + 1)
+    }
+
+    return answer
+}
+
+public func findLenght(for string: String) -> Int {
+    var left = 0, current = 0, answer = 0
+    for (right, _) in string.enumerated() {
+        let rightIndex = string.index(string.startIndex, offsetBy: right)
+
+        if string[rightIndex] == "0" {
+            current += 1
+        }
+
+        while current > 1 {
+            let leftIndex = string.index(string.startIndex, offsetBy: left)
+            if string[leftIndex] == "0" {
+                current -= 1
+            }
+            left += 1
+        }
+
+        answer = max(answer, right - left + 1)
+    }
+
+    return answer
+}
+
+public func numSubarrayProductLessThanK(nums: [Int], k: Int) -> Int {
+    guard k > 1 else {
+        return 0
+    }
+
+    var answer = 0
+    var left = 0, current = 1
+    for right in 0..<nums.count {
+        current *= nums[right]
+
+        while current >= k {
+            current /= nums[left]
+            left += 1
+        }
+
+        answer += (right - left + 1)
+    }
+
+    return answer
+}
+
+public func findBestSubArray(nums: [Int], k: Int) -> Int {
+    var current = 0
+    for i in 0..<k {
+        current += nums[i]
+    }
+
+    var answer = current
+    for i in k..<nums.count {
+        current += (nums[i] - nums[i - k])
+        answer = max(answer, current)
+    }
+
+    return answer
+}
+
+public func findMaxAverage(_ nums: [Int], _ k: Int) -> Double {
+    var left = 0
+    var average: Double = Double(Int.min)
+    var range = 0
+    var sum: Double = 0.0
+
+    for right in 0..<nums.count {
+        sum += Double(nums[right])
+        range += 1
+        
+        if range > k {
+            sum -= Double(nums[left])
+            left += 1
+            range -= 1
+        }
+        
+        if range == k {
+            let currentAverage: Double = sum / Double(k)
+            average = average > currentAverage ? average : currentAverage
+        }
+    }
+
+    return average
+}
+
+public func longestOnes(_ nums: [Int], _ k: Int) -> Int {
+    var left = 0
+    var zeros = 0
+    var maxValue = 0
+
+    for right in 0..<nums.count {
+        if nums[right] == 0 {
+            zeros += 1
+            
+            while zeros > k {
+                let value = nums[left]
+                if value == 0 {
+                    zeros -= 1
+                }
+                left += 1
+            }
+        }
+        
+        maxValue = max(maxValue, right - left + 1)
+    }
+    
+    return maxValue
+}

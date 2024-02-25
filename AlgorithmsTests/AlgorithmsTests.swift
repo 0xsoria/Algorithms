@@ -29,17 +29,17 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertTrue("thequickbrownfoxjumpsoverthelazydog".pangram())
         XCTAssertFalse("Gabriel".pangram())
     }
-
+    
     func testFindNumbers() {
         XCTAssertEqual(findNumbers(nums: [1, 2, 3, 5, 8, 12, 13, 14, 15]).sorted(),
                        [5, 8])
     }
-
+    
     func testFirstRepeatedChar() {
         XCTAssertEqual(firstRepeatedCharacter("abcdeda"), Character("d"))
         XCTAssertEqual(firstRepeatedCharacter("abcdefg"), Character(" "))
     }
-
+    
     func testTwoSumNotSorted() {
         XCTAssertEqual(twoSumNotSorted(nums: [5, 2, 7, 10, 3, 9], target: 8), [4, 0])
         XCTAssertEqual(twoSumNotSorted(nums: [5, 2, 7, 10, 3, 9], target: 18), [])
@@ -49,7 +49,7 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertTrue("hello".reversed() == "olleh")
         XCTAssertTrue("bala".reversed() == "alab")
     }
-
+    
     func testSubsequence() {
         XCTAssertTrue("ace".isSubsequence(of: "abcde"))
         XCTAssertFalse("ace".isSubsequence(of: "aebcd"))
@@ -59,17 +59,17 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertTrue(checkForTarget(nums: [1, 2, 4, 6, 8, 9, 14, 15], target: 13))
         XCTAssertFalse(checkForTarget(nums: [1, 2, 4, 6, 8, 9, 14, 15], target: 30))
     }
-
+    
     func testCombineArrays() {
         XCTAssertEqual([1, 2, 3].combine(with: [4, 5, 6]), [1, 2, 3, 4, 5, 6])
         XCTAssertEqual([1, 4, 7, 20].combine(with: [3, 5, 6]), [1, 3, 4, 5, 6, 7, 20])
     }
-
+    
     func testPalindrome() {
         XCTAssertTrue("racecar".isPalindrome())
         XCTAssertFalse("aceba".isPalindrome())
     }
-
+    
     func makeSut() -> [Int] {
         let bundle = Bundle(for: type(of: self))
         let url = bundle.url(forResource: "Inversions", withExtension: "txt")
@@ -130,7 +130,7 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertTrue(result.0 == [1, 2, 3, 10, 11, 12])
         XCTAssertTrue(result.1 == 9)
     }
-
+    
     func testKaratsuba() {
         let karatsuba = karatsuba(100000, by: 100000)
         let multiply = multiply("100000", by: "100000")
@@ -191,7 +191,7 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertTrue(result.0.count == 100000)
         print(result.1)
     }
-
+    
     func testMySetInsertionAndRemove() {
         var mySet = NewSet<String>()
         mySet.insert("Gabriel")
@@ -204,5 +204,52 @@ class AlgorithmsTests: XCTestCase {
         XCTAssertTrue(mySet.count == 1)
         _ = mySet.remove("Marcela")
         XCTAssertTrue(mySet.count == 0)
+    }
+
+    func testFindLenght() {
+        let arr = [3, 1, 2, 7, 4, 2, 1, 1, 5]
+        let result = findLenght(nums: arr, k: 8)
+        XCTAssertEqual(result, 4)
+    }
+
+    func testFindLenghtInBinaryString() {
+        let binaryString = "1101100111"
+        let result = findLenght(for: binaryString)
+        XCTAssertEqual(result, 5)
+    }
+
+    func testNumSubArrayProductLessThanK() {
+        let result = numSubarrayProductLessThanK(nums: [10, 5, 2, 6], k: 100)
+        XCTAssertEqual(result, 8)
+    }
+
+    func testNumSubArrayProductLessThanKTwo() {
+        let result = numSubarrayProductLessThanK(nums: [1, 1, 1], k: 1)
+        XCTAssertEqual(result, 0)
+    }
+
+    func testFindBestSubArray() {
+        let result = findBestSubArray(nums: [3, -1, 4, 12, -8, 5, 6], k: 4)
+        XCTAssertEqual(result, 18)
+    }
+    
+    func testFindMaxAverage() {
+        let result = findMaxAverage([1, 12, -5, -6, 50, 3], 4)
+        XCTAssertEqual(result, 12.75)
+    }
+    
+    func testLongestOnes() {
+        let result = longestOnes([1,1,1,0,0,0,1,1,1,1,0], 2)
+        XCTAssertEqual(result, 6)
+    }
+
+    func testLongestOnesTwo() {
+        let result = longestOnes([0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], 3)
+        XCTAssertEqual(result, 10)
+    }
+    
+    func testLongestOnesThree() {
+        let result = longestOnes([0,0,1,1,1,0,0], 0)
+        XCTAssertEqual(result, 3)
     }
 }
