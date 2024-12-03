@@ -324,3 +324,130 @@ public func longestOnes(_ nums: [Int], _ k: Int) -> Int {
     
     return maxValue
 }
+
+public func waysToSplitArray(nums: [Int]) -> Int {
+    let n = nums.count
+    
+    var prefix = [nums[0]]
+    for i in 1...n {
+        prefix.append(nums[i] + (prefix.last ?? 0))
+    }
+    var answer = 0
+    
+    for i in 0..<n - 1 {
+        var leftSection = prefix[i]
+        var rightSection = (prefix.last ?? 0) - prefix[i]
+        if leftSection >= rightSection {
+            answer += 1
+        }
+    }
+
+    return answer
+    
+}
+
+public func runningSum(_ nums: [Int]) -> [Int] {
+    guard nums.count > 0 else {
+        return []
+    }
+
+    var returnData = [nums[0]]
+
+    for a in 1..<nums.count {
+        returnData.append(nums[a] + returnData[a - 1])
+    }
+
+    return returnData
+}
+
+
+public func getAverages(_ nums: [Int], _ k: Int) -> [Int] {
+    var output = [Int]()
+    let count = pow(10, 5)
+    let intValue = Int(truncating: count as NSDecimalNumber)
+    guard intValue >= nums.count else {
+        return nums
+    }
+    
+    var prefixSum = runningSum(nums)
+
+    for (index, num) in nums.enumerated() {
+        
+        if index < k || index + k > (nums.count - 1) {
+            output.append(-1)
+        } else {
+            let lower = index - k
+            let upper = index + k
+            var sum = prefixSum[upper]
+            
+            if lower > 0 {
+                for i in 0...lower - 1 {
+                    sum -= nums[i]
+                }
+            }
+            
+            let number = sum / ((upper - lower) + 1)
+            output.append(number)
+        }
+    }
+
+    return output
+}
+
+public func getAverages2(_ nums: [Int], _ k: Int) -> [Int] {
+    var output = [Int]()
+
+    let count = pow(10, 5)
+    let intValue = Int(truncating: count as NSDecimalNumber)
+    guard intValue >= nums.count else {
+        return nums
+    }
+    
+    var currentPrefixSum = [Int]()
+    var currentSum = 0
+
+    for (index, num) in nums.enumerated() {
+        
+        if index < k || index + k > (nums.count - 1) {
+            output.append(-1)
+        } else {
+            let lower = index - k
+            let upper = index + k
+            if currentPrefixSum.isEmpty {
+                currentPrefixSum = runningSum(Array(nums[lower...upper]))
+                currentSum = currentPrefixSum.last ?? 0
+                
+            } else {
+                if lower > 0 {
+                    for i in 0...lower - 1 {
+                        currentSum -= currentPrefixSum[i]
+                        currentPrefixSum.remove(at: i)
+                    }
+                    
+                    currentPrefixSum.append(nums[upper] + (currentPrefixSum.last ?? 0))
+                    currentSum += nums[upper]
+                    
+                }
+            }
+            let prefixIndex = currentPrefixSum.last ?? 0
+            let number = currentSum / currentPrefixSum.count
+            output.append(number)
+        }
+    }
+
+    return output
+}
+
+public func missingNumber2(_ nums: [Int]) -> Int {
+    let size = nums.count
+    var dictionary: [Int: Int] = [:]
+    nums.forEach { dictionary[$0] = 1 }
+
+    for num in 0...size {
+        if dictionary[num] == nil {
+            return num
+        }
+    }
+    
+    return -1
+}

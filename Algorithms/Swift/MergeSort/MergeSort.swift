@@ -55,5 +55,21 @@ extension Array where Element: Comparable {
         }
         return returnArray
     }
+    
+    func bruteForceSort() -> [Element] {
+        var returnArray = self
+
+        for i in 0..<returnArray.count {
+            for j in i + 1..<returnArray.count {
+                if returnArray[i] > returnArray[j] {
+                    let temp = returnArray[i]
+                    returnArray[i] = returnArray[j]
+                    returnArray[j] = temp
+                }
+            }
+        }
+
+        return returnArray
+    }
 }
 

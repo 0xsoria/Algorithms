@@ -48,6 +48,7 @@
 		15FE2EF227067E5D00373C76 /* RandomizedSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE2EF127067E5D00373C76 /* RandomizedSelection.swift */; };
 		15FE2EF6270748BC00373C76 /* SlowAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE2EF5270748BC00373C76 /* SlowAlgorithms.swift */; };
 		ABE638502AED5BFC00652B7E /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE6384F2AED5BFC00652B7E /* Others.swift */; };
+		B6AE67262CFF9A2100620C2A /* CustomDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AE67252CFF9A2100620C2A /* CustomDictionary.swift */; };
 		B6BD2F812B5DB91300B3C4E0 /* MyAlgorithms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6BD2F7F2B5DB91300B3C4E0 /* MyAlgorithms.cpp */; };
 		B6BD2F842B5DC03300B3C4E0 /* MyAlgorithms.h in Headers */ = {isa = PBXBuildFile; fileRef = B6BD2F832B5DBE9300B3C4E0 /* MyAlgorithms.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -106,6 +107,7 @@
 		15FE2EF127067E5D00373C76 /* RandomizedSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomizedSelection.swift; sourceTree = "<group>"; };
 		15FE2EF5270748BC00373C76 /* SlowAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlowAlgorithms.swift; sourceTree = "<group>"; };
 		ABE6384F2AED5BFC00652B7E /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
+		B6AE67252CFF9A2100620C2A /* CustomDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDictionary.swift; sourceTree = "<group>"; };
 		B6BD2F7F2B5DB91300B3C4E0 /* MyAlgorithms.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = MyAlgorithms.cpp; path = cpp/MyAlgorithms.cpp; sourceTree = "<group>"; };
 		B6BD2F832B5DBE9300B3C4E0 /* MyAlgorithms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAlgorithms.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,6 +208,7 @@
 				15CC5EB92742D86E00348672 /* BinarySearchTree.swift */,
 				15CC5EBD2745211A00348672 /* TwoSum.swift */,
 				ABE6384F2AED5BFC00652B7E /* Others.swift */,
+				B6AE67252CFF9A2100620C2A /* CustomDictionary.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			files = (
 				15C3B9502711DE5E00512816 /* Edge.swift in Sources */,
 				15B0F6AE2715D4DD000326C9 /* Visit.swift in Sources */,
+				B6AE67262CFF9A2100620C2A /* CustomDictionary.swift in Sources */,
 				15ED778326EA8C17004D86C3 /* InsertSortCPP.mm in Sources */,
 				15ED779126EA8C8B004D86C3 /* InsertionSort.c in Sources */,
 				15FCDAF426F009B700A968D9 /* MergeSort.swift in Sources */,
